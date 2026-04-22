@@ -260,6 +260,171 @@ section{padding:96px 0}
 }
 .cert-badge span{font-size:20px}
 
+/* =========================
+   REDES SOCIALES
+========================= */
+.social-links{
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.social-btn{
+  display: inline-block;
+  padding: 10px 14px;
+  background: rgba(197,160,89,0.12);
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 12px;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(6px);
+}
+
+.social-btn:hover{
+  background: var(--gold);
+  color: #000;
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   CTA SECTION
+========================= */
+.cta-section{
+  margin-top: 25px;
+  padding: 20px;
+  background: rgba(15,30,58,0.95);
+  border-radius: 16px;
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+
+.cta-section h3{
+  font-family: var(--font-display);
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.cta-section p{
+  font-size: 13px;
+  opacity: 0.85;
+  margin-bottom: 14px;
+}
+
+
+/* =========================
+   BOTÓN AGENDA
+========================= */
+.agenda-btn{
+  display: inline-block;
+  padding: 12px 18px;
+  background: linear-gradient(135deg, var(--gold), var(--gold2));
+  color: #000;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 13px;
+  transition: all 0.3s ease;
+}
+
+.agenda-btn:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+
+/* =========================
+   CALENDLY
+========================= */
+.calendly-embed{
+  margin-top: 18px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.calendly-embed iframe{
+  width: 100%;
+  height: 600px;
+  border: none;
+}
+
+
+/* =========================
+   ANIMACIONES
+========================= */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-text,
+.about-photo,
+.cta-section,
+.calendly-embed {
+  animation: fadeUp 0.6s ease-out;
+}
+
+.cta-section,
+.about-quote,
+.testimonial-card {
+  transition: all 0.3s ease;
+}
+
+.cta-section:hover,
+.testimonial-card:hover {
+  transform: translateY(-3px);
+}
+
+
+/* =========================
+   MOBILE OPTIMIZATION
+========================= */
+@media (max-width: 768px) {
+
+  body {
+    font-size: 14px;
+  }
+
+  .about-quote {
+    max-width: 100%;
+    font-size: 12px;
+  }
+
+  .social-links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .social-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .agenda-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .calendly-embed iframe {
+    height: 500px;
+  }
+
+  .about {
+    padding: 20px 15px;
+  }
+
+}
 /* ── FORM ──────────────────────────────────────────────────── */
 .contact-section{
   background:linear-gradient(135deg,var(--navy) 0%,#162848 100%);
@@ -594,30 +759,74 @@ footer{background:#0a1628;color:rgba(255,255,255,.5);padding:40px 0}
 
 <!-- ═══════════ SOBRE MÍ ═══════════ -->
 <section class="about" id="sobre-mi">
+
   <div class="wrap about-grid">
+
     <div class="about-photo reveal">
+
       <div class="about-photo-frame">
         <img src="foto-profesional-3.png" alt="Héctor Chavarría - Broker hipotecario certificado Puebla">
       </div>
+
       <div class="about-deco"></div>
+
       <div class="about-quote">
         <strong>Filosofía</strong>
         "Una decisión hipotecaria bien tomada construye patrimonio para toda la familia."
       </div>
+
     </div>
+
     <div class="about-text reveal">
+
       <div class="tag">Quién soy</div>
       <h2>Héctor Chavarría</h2>
+
       <p>Soy broker hipotecario certificado por la Asociación Hipotecaria Mexicana (AHMEX), especializado en estructurar soluciones de crédito que se adaptan a la realidad de cada cliente.</p>
+
       <p>Trabajo bajo el respaldo de MB Concilium y he acompañado a familias en Puebla, Cholula y Huejotzingo a concretar su patrimonio con confianza, claridad y estrategia.</p>
+
       <p>Mi enfoque es simple: <strong>información real, opciones concretas y acompañamiento humano.</strong></p>
+
       <div class="certs">
         <div class="cert-badge"><span>🎓</span> AHMEX Certificado</div>
         <div class="cert-badge"><span>🏛️</span> MB Concilium</div>
         <div class="cert-badge"><span>📍</span> Puebla, México</div>
       </div>
+
+      <div class="social-links">
+
+        <a class="social-btn" href="https://www.instagram.com/hchavarriahipotecario/" target="_blank">Instagram</a>
+        <a class="social-btn" href="https://www.facebook.com/chavarriahipotecario" target="_blank">Facebook</a>
+        <a class="social-btn" href="https://www.linkedin.com/in/hctrchvrr/" target="_blank">LinkedIn</a>
+        <a class="social-btn" href="https://sites.google.com/view/hector-chavarria/p%C3%A1gina-principal" target="_blank">Sitio web</a>
+
+      </div>
+
+      <div class="cta-section">
+
+        <h3>Agenda tu asesoría</h3>
+        <p>Diagnóstico hipotecario en menos de 24 horas para encontrar la mejor opción para ti.</p>
+
+        <a class="agenda-btn" href="https://calendly.com/hectorchavarria-hipotecario/asesoria-patrimonial" target="_blank">
+          Agendar ahora
+        </a>
+
+      </div>
+
+      <div class="calendly-embed">
+
+        <iframe 
+          src="https://calendly.com/hectorchavarria-hipotecario/asesoria-patrimonial"
+          frameborder="0">
+        </iframe>
+
+      </div>
+
     </div>
+
   </div>
+
 </section>
 
 <!-- ═══════════ TESTIMONIALES ═══════════ -->
