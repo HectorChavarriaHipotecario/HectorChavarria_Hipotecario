@@ -236,12 +236,16 @@ section{padding:96px 0}
   border-radius:20px;z-index:-1;opacity:.15;
 }
 .about-quote{
-  position:absolute;top:24px;left:-20px;
+  position:relative;margin-top: 20px;
   background:var(--navy);color:#fff;
   padding:16px 20px;border-radius:14px;
   box-shadow:var(--shadow);
   max-width:200px;font-size:13px;line-height:1.5;
-  border-left:3px solid var(--gold);
+  border-left:3px solid var(--gold); transition: all 0.3s ease;
+}
+
+.about-quote:hover{
+  transform: translateY(-3px);
 }
 .about-quote strong{color:var(--gold);font-size:11px;letter-spacing:1px;text-transform:uppercase;display:block;margin-bottom:6px}
 .about-text .tag{display:inline-block}
@@ -422,12 +426,12 @@ footer{background:#0a1628;color:rgba(255,255,255,.5);padding:40px 0}
         </div>
         <div class="hero-stats">
           <div class="stat">
-            <div class="stat-num">+15</div>
+            <div class="stat-num">+10</div>
             <div class="stat-label">Bancos comparados</div>
           </div>
           <div class="stat">
             <div class="stat-num">100%</div>
-            <div class="stat-label">Sin costo inicial</div>
+            <div class="stat-label">Asesoría sin costo para ti</div>
           </div>
           <div class="stat">
             <div class="stat-num">AHMEX</div>
@@ -455,7 +459,7 @@ footer{background:#0a1628;color:rgba(255,255,255,.5);padding:40px 0}
 <!-- ═══════════ TRUST BAR ═══════════ -->
 <div class="trust-bar">
   <div class="wrap trust-inner">
-    <div class="trust-item"><span class="trust-icon">🏦</span><strong>+15 instituciones</strong>&nbsp;bancarias</div>
+    <div class="trust-item"><span class="trust-icon">🏦</span><strong>+10 instituciones</strong>&nbsp;bancarias</div>
     <div class="trust-item"><span class="trust-icon">✅</span>Certificado&nbsp;<strong>AHMEX</strong></div>
     <div class="trust-item"><span class="trust-icon">🛡️</span>Respaldado por&nbsp;<strong>MB Concilium</strong></div>
     <div class="trust-item"><span class="trust-icon">📍</span>Puebla · Cholula · Huejotzingo</div>
@@ -526,7 +530,7 @@ footer{background:#0a1628;color:rgba(255,255,255,.5);padding:40px 0}
           <div class="why-check">🎯</div>
           <div class="why-item-text">
             <h4>Comparación estratégica real</h4>
-            <p>Acceso a más de 15 bancos. Te presento opciones concretas, no promesas genéricas.</p>
+            <p>Acceso a más de 10 bancos. Te presento opciones concretas, no promesas genéricas.</p>
           </div>
         </div>
         <div class="why-item">
