@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Héctor Chavarría | Broker Hipotecario Certificado · Puebla</title>
+<meta name="description" content="Precalifica tu crédito hipotecario en Puebla, Cholula y Huejotzingo con Héctor Chavarría, broker certificado AHMEX. Compara las mejores opciones bancarias en minutos.">
+<meta name="keywords" content="broker hipotecario Puebla, crédito hipotecario, Cofinavit, AHMEX, MB Concilium, Héctor Chavarría">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ── TOKENS ────────────────────────────────────────────────── */
+:root{
+  --navy:#0F1E3A;
+  --navy2:#162848;
+  --char:#22252B;
+  --white:#F8F9FA;
+  --off:#EEF0F4;
+  --gold:#C5A059;
+  --gold2:#C8A24A;
+  --gold-light:#E5C97E;
+  --text:#2C3040;
+  --muted:#6B7280;
+  --radius:16px;
+  --shadow:0 20px 60px rgba(15,30,58,.13);
+  --shadow-sm:0 6px 24px rgba(15,30,58,.08);
+  --font-display:'Cormorant Garamond',Georgia,serif;
+  --font-body:'DM Sans',system-ui,sans-serif;
+  --ease:cubic-bezier(.22,.68,0,1.2);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--white);color:var(--text);line-height:1.6;overflow-x:hidden}
+
+/* ── UTILITY ───────────────────────────────────────────────── */
+.wrap{max-width:1140px;margin:auto;padding:0 28px}
+.gold{color:var(--gold)}
+.tag{display:inline-block;font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold);padding:5px 14px;border:1px solid rgba(197,160,89,.35);border-radius:40px;margin-bottom:18px}
+
+/* ── NOISE OVERLAY ─────────────────────────────────────────── */
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:999;opacity:.022;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ── HEADER ────────────────────────────────────────────────── */
+#header{
+  position:fixed;top:0;left:0;right:0;z-index:900;
+  padding:16px 0;
+  transition:background .4s,box-shadow .4s,padding .3s;
+}
+#header.scrolled{
+  background:rgba(15,30,58,.96);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+  box-shadow:0 2px 40px rgba(0,0,0,.3);
+  padding:10px 0;
+}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo-wrap{display:flex;align-items:center;gap:14px;text-decoration:none}
+.logo-img{width:48px;height:48px;object-fit:contain;transition:transform .3s var(--ease)}
+.logo-img:hover{transform:scale(1.07)}
+.logo-text{color:#fff;line-height:1.2}
+.logo-name{font-family:var(--font-display);font-size:20px;font-weight:600;letter-spacing:.5px}
+.logo-sub{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(197,160,89,.85);font-weight:500}
+nav{display:flex;align-items:center;gap:6px}
+nav a{color:rgba(255,255,255,.8);text-decoration:none;font-size:13.5px;font-weight:500;padding:8px 14px;border-radius:40px;transition:color .2s,background .2s}
+nav a:hover{color:#fff;background:rgba(255,255,255,.1)}
+.nav-cta{background:linear-gradient(135deg,var(--gold),var(--gold2))!important;color:#0F1E3A!important;font-weight:700!important;padding:9px 22px!important}
+.nav-cta:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(197,160,89,.4)!important}
+.menu-btn{display:none;background:none;border:none;cursor:pointer;padding:6px;flex-direction:column;gap:5px}
+.menu-btn span{display:block;width:24px;height:2px;background:#fff;border-radius:2px;transition:.3s}
+
+/* ── HERO ──────────────────────────────────────────────────── */
+.hero{
+  min-height:100vh;
+  background:var(--navy);
+  position:relative;
+  display:flex;align-items:center;
+  overflow:hidden;
+  padding-top:90px;
+}
+.hero-bg{
+  position:absolute;inset:0;z-index:0;
+  background:
+    radial-gradient(ellipse 70% 80% at 80% 50%, rgba(197,160,89,.08) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 60% at -10% 80%, rgba(22,40,72,.9) 0%, transparent 60%),
+    linear-gradient(135deg,#0F1E3A 0%,#162848 50%,#0F1E3A 100%);
+}
+.hero-grid-lines{
+  position:absolute;inset:0;z-index:0;opacity:.04;
+  background-image:linear-gradient(rgba(197,160,89,1) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(197,160,89,1) 1px,transparent 1px);
+  background-size:60px 60px;
+}
+.hero-content{position:relative;z-index:2;display:grid;grid-template-columns:1fr 480px;gap:60px;align-items:center;padding:60px 0 80px}
+.hero-left{}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:'';display:block;width:30px;height:1px;background:var(--gold)}
+h1{font-family:var(--font-display);font-size:clamp(42px,5.5vw,72px);line-height:1.06;color:#fff;font-weight:700;margin-bottom:22px}
+h1 em{color:var(--gold);font-style:italic}
+.hero-sub{font-size:17px;color:rgba(255,255,255,.7);max-width:500px;line-height:1.7;margin-bottom:34px;font-weight:300}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:50px}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#0F1E3A;font-weight:700;font-size:15px;padding:15px 28px;border-radius:50px;text-decoration:none;border:none;cursor:pointer;transition:transform .2s,box-shadow .2s;font-family:var(--font-body)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(197,160,89,.45)}
+.btn-secondary{display:inline-flex;align-items:center;gap:8px;background:transparent;color:#fff;font-weight:600;font-size:15px;padding:15px 28px;border-radius:50px;text-decoration:none;border:1.5px solid rgba(255,255,255,.25);cursor:pointer;transition:.2s;font-family:var(--font-body)}
+.btn-secondary:hover{border-color:rgba(255,255,255,.6);background:rgba(255,255,255,.05)}
+.hero-stats{display:flex;gap:32px;flex-wrap:wrap}
+.stat{border-left:2px solid rgba(197,160,89,.4);padding-left:16px}
+.stat-num{font-family:var(--font-display);font-size:32px;font-weight:700;color:#fff;line-height:1}
+.stat-label{font-size:12px;color:rgba(255,255,255,.5);margin-top:4px;letter-spacing:.5px}
+
+/* PHOTO COLLAGE */
+.hero-right{position:relative;height:540px}
+.photo-main{
+  position:absolute;right:0;bottom:0;
+  width:310px;height:420px;
+  border-radius:24px 24px 4px 24px;
+  overflow:hidden;
+  box-shadow:0 30px 80px rgba(0,0,0,.5);
+  border:2px solid rgba(197,160,89,.3);
+}
+.photo-main img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.photo-accent{
+  position:absolute;left:0;top:30px;
+  width:220px;height:280px;
+  border-radius:4px 24px 24px 24px;
+  overflow:hidden;
+  box-shadow:0 20px 60px rgba(0,0,0,.4);
+  border:2px solid rgba(197,160,89,.2);
+}
+.photo-accent img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.badge-cert{
+  position:absolute;left:50%;bottom:20px;transform:translateX(-50%);
+  background:rgba(15,30,58,.92);
+  backdrop-filter:blur(12px);
+  border:1px solid rgba(197,160,89,.4);
+  border-radius:12px;padding:12px 18px;
+  text-align:center;white-space:nowrap;
+  box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+.badge-cert strong{color:var(--gold);font-size:12px;letter-spacing:1.5px;text-transform:uppercase;display:block;font-weight:700}
+.badge-cert span{color:rgba(255,255,255,.7);font-size:11px}
+.deco-ring{
+  position:absolute;right:-30px;top:-30px;
+  width:200px;height:200px;
+  border-radius:50%;
+  border:1px solid rgba(197,160,89,.12);
+  pointer-events:none;
+}
+.deco-ring::after{content:'';position:absolute;inset:20px;border-radius:50%;border:1px solid rgba(197,160,89,.08)}
+
+/* ── TRUST BAR ─────────────────────────────────────────────── */
+.trust-bar{background:var(--char);padding:22px 0;border-top:1px solid rgba(197,160,89,.15)}
+.trust-inner{display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.6);font-size:13px;font-weight:500}
+.trust-icon{color:var(--gold);font-size:18px}
+.trust-item strong{color:rgba(255,255,255,.9)}
+
+/* ── SECTIONS ──────────────────────────────────────────────── */
+section{padding:96px 0}
+.section-label{text-align:center;margin-bottom:52px}
+.section-label h2{font-family:var(--font-display);font-size:clamp(32px,4vw,52px);color:var(--navy);font-weight:700;line-height:1.1;margin-bottom:14px}
+.section-label p{color:var(--muted);font-size:16px;max-width:520px;margin:0 auto}
+
+/* ── SERVICES ──────────────────────────────────────────────── */
+.services{background:var(--white)}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.srv-card{
+  background:#fff;border:1px solid rgba(15,30,58,.08);
+  border-radius:20px;padding:32px 28px;
+  transition:transform .3s var(--ease),box-shadow .3s,border-color .3s;
+  position:relative;overflow:hidden;
+}
+.srv-card::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(197,160,89,.05) 0%,transparent 60%);
+  opacity:0;transition:opacity .3s;
+}
+.srv-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:rgba(197,160,89,.4)}
+.srv-card:hover::after{opacity:1}
+.srv-num{font-family:var(--font-display);font-size:48px;font-weight:700;color:rgba(15,30,58,.06);line-height:1;margin-bottom:12px}
+.srv-icon{font-size:28px;margin-bottom:14px;display:block}
+.srv-card h3{font-family:var(--font-display);font-size:22px;color:var(--navy);font-weight:600;margin-bottom:8px}
+.srv-card p{color:var(--muted);font-size:14px;line-height:1.6}
+
+/* ── WHY ME ────────────────────────────────────────────────── */
+.why{background:var(--navy);position:relative;overflow:hidden}
+.why::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 80% 100% at 100% 50%,rgba(197,160,89,.07) 0%,transparent 60%);
+}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;position:relative;z-index:1}
+.why-left h2{font-family:var(--font-display);font-size:clamp(34px,4vw,54px);color:#fff;font-weight:700;line-height:1.1;margin-bottom:20px}
+.why-left p{color:rgba(255,255,255,.65);font-size:16px;line-height:1.75;margin-bottom:32px;font-weight:300}
+.why-list{display:flex;flex-direction:column;gap:18px}
+.why-item{display:flex;align-items:flex-start;gap:16px;padding:20px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:16px;transition:.3s}
+.why-item:hover{background:rgba(197,160,89,.07);border-color:rgba(197,160,89,.2)}
+.why-check{width:36px;height:36px;background:linear-gradient(135deg,var(--gold),var(--gold2));border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px}
+.why-item-text h4{font-size:15px;font-weight:600;color:#fff;margin-bottom:4px}
+.why-item-text p{font-size:13.5px;color:rgba(255,255,255,.55);line-height:1.5}
+
+/* ── PROCESS ───────────────────────────────────────────────── */
+.process{background:var(--off)}
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;position:relative}
+.process-steps::before{
+  content:'';position:absolute;top:38px;left:12%;right:12%;
+  height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  z-index:0;
+}
+.step{text-align:center;position:relative;z-index:1}
+.step-num{
+  width:76px;height:76px;border-radius:50%;
+  background:linear-gradient(135deg,var(--gold),var(--gold2));
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 20px;
+  font-family:var(--font-display);font-size:28px;font-weight:700;color:var(--navy);
+  box-shadow:0 8px 28px rgba(197,160,89,.4);
+}
+.step h3{font-size:16px;font-weight:600;color:var(--navy);margin-bottom:8px}
+.step p{font-size:13.5px;color:var(--muted);line-height:1.5}
+
+/* ── ABOUT ─────────────────────────────────────────────────── */
+.about{background:#fff}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.about-photo{position:relative}
+.about-photo-frame{
+  border-radius:24px;overflow:hidden;
+  box-shadow:var(--shadow);
+  aspect-ratio:3/4;max-height:520px;
+}
+.about-photo-frame img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.about-deco{
+  position:absolute;bottom:-20px;right:-20px;
+  width:140px;height:140px;
+  background:linear-gradient(135deg,var(--gold),var(--gold2));
+  border-radius:20px;z-index:-1;opacity:.15;
+}
+.about-quote{
+  position:absolute;top:24px;left:-20px;
+  background:var(--navy);color:#fff;
+  padding:16px 20px;border-radius:14px;
+  box-shadow:var(--shadow);
+  max-width:200px;font-size:13px;line-height:1.5;
+  border-left:3px solid var(--gold);
+}
+.about-quote strong{color:var(--gold);font-size:11px;letter-spacing:1px;text-transform:uppercase;display:block;margin-bottom:6px}
+.about-text .tag{display:inline-block}
+.about-text h2{font-family:var(--font-display);font-size:clamp(32px,3.5vw,48px);color:var(--navy);font-weight:700;line-height:1.1;margin-bottom:18px}
+.about-text p{color:var(--muted);font-size:15.5px;line-height:1.75;margin-bottom:16px}
+.certs{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+.cert-badge{
+  display:flex;align-items:center;gap:10px;
+  background:var(--off);border:1px solid rgba(15,30,58,.1);
+  border-radius:12px;padding:12px 18px;
+  font-size:13px;font-weight:600;color:var(--navy);
+}
+.cert-badge span{font-size:20px}
+
+/* ── FORM ──────────────────────────────────────────────────── */
+.contact-section{
+  background:linear-gradient(135deg,var(--navy) 0%,#162848 100%);
+  position:relative;overflow:hidden;
+}
+.contact-section::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 60% 80% at 0% 50%,rgba(197,160,89,.07) 0%,transparent 60%);
+}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;position:relative;z-index:1}
+.contact-left h2{font-family:var(--font-display);font-size:clamp(34px,4vw,54px);color:#fff;font-weight:700;line-height:1.1;margin-bottom:18px}
+.contact-left p{color:rgba(255,255,255,.65);font-size:16px;line-height:1.75;margin-bottom:36px;font-weight:300}
+.contact-info{display:flex;flex-direction:column;gap:16px}
+.c-info-item{display:flex;align-items:center;gap:14px;color:rgba(255,255,255,.75);font-size:14.5px}
+.c-info-item a{color:rgba(255,255,255,.75);text-decoration:none;transition:.2s}
+.c-info-item a:hover{color:var(--gold)}
+.c-icon{width:40px;height:40px;background:rgba(197,160,89,.15);border:1px solid rgba(197,160,89,.3);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.form-card{
+  background:#fff;border-radius:24px;
+  padding:40px;box-shadow:0 30px 80px rgba(0,0,0,.3);
+}
+.form-card h3{font-family:var(--font-display);font-size:26px;color:var(--navy);font-weight:600;margin-bottom:6px}
+.form-card .form-sub{color:var(--muted);font-size:14px;margin-bottom:28px}
+.field{margin-bottom:18px}
+.field label{display:block;font-size:12px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;color:var(--navy);margin-bottom:7px;opacity:.75}
+.field input,.field select{
+  width:100%;padding:13px 16px;
+  border:1.5px solid rgba(15,30,58,.12);border-radius:12px;
+  font-family:var(--font-body);font-size:14.5px;color:var(--text);
+  background:#fff;transition:border-color .2s,box-shadow .2s;
+  outline:none;-webkit-appearance:none;
+}
+.field input::placeholder{color:#aaa}
+.field input:focus,.field select:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(197,160,89,.12)}
+.field select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='%236B7280' d='M5 7l5 5 5-5z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:18px;padding-right:40px}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.btn-form{
+  width:100%;padding:15px;
+  background:linear-gradient(135deg,var(--gold),var(--gold2));
+  color:#0F1E3A;font-weight:700;font-size:15px;
+  border:none;border-radius:12px;cursor:pointer;
+  font-family:var(--font-body);letter-spacing:.3px;
+  transition:transform .2s,box-shadow .2s;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+}
+.btn-form:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(197,160,89,.4)}
+.form-note{text-align:center;font-size:12px;color:var(--muted);margin-top:12px}
+
+/* ── TESTIMONIAL ───────────────────────────────────────────── */
+.testi{background:var(--off);padding:80px 0}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.testi-card{
+  background:#fff;border-radius:20px;padding:28px;
+  box-shadow:var(--shadow-sm);border:1px solid rgba(15,30,58,.06);
+}
+.stars{color:var(--gold);font-size:14px;margin-bottom:14px;letter-spacing:2px}
+.testi-card p{font-size:14.5px;line-height:1.7;color:var(--text);margin-bottom:20px;font-style:italic}
+.testi-author{font-size:13px;font-weight:600;color:var(--navy)}
+.testi-loc{font-size:12px;color:var(--muted)}
+
+/* ── CTA FINAL ─────────────────────────────────────────────── */
+.cta-final{
+  background:linear-gradient(135deg,var(--gold) 0%,var(--gold2) 50%,#b8923e 100%);
+  text-align:center;padding:80px 0;
+}
+.cta-final h2{font-family:var(--font-display);font-size:clamp(36px,5vw,62px);color:var(--navy);font-weight:700;line-height:1.08;margin-bottom:16px}
+.cta-final p{font-size:17px;color:rgba(15,30,58,.75);margin-bottom:36px;max-width:540px;margin-left:auto;margin-right:auto;line-height:1.6}
+.btn-dark{display:inline-flex;align-items:center;gap:10px;background:var(--navy);color:#fff;font-weight:700;font-size:15.5px;padding:17px 34px;border-radius:50px;text-decoration:none;transition:.2s}
+.btn-dark:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(15,30,58,.4)}
+
+/* ── FOOTER ────────────────────────────────────────────────── */
+footer{background:#0a1628;color:rgba(255,255,255,.5);padding:40px 0}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:gap;gap:20px}
+.footer-brand{display:flex;align-items:center;gap:12px}
+.footer-logo{width:36px;height:36px;object-fit:contain;opacity:.85}
+.footer-name{font-family:var(--font-display);font-size:16px;color:rgba(255,255,255,.8)}
+.footer-links{display:flex;gap:6px;flex-wrap:wrap}
+.footer-links a{color:rgba(255,255,255,.45);font-size:13px;padding:6px 10px;border-radius:6px;text-decoration:none;transition:.2s}
+.footer-links a:hover{color:var(--gold)}
+.footer-copy{font-size:12px;text-align:center;margin-top:20px;padding-top:20px;border-top:1px solid rgba(255,255,255,.07);color:rgba(255,255,255,.3)}
+
+/* ── WAP BTN ───────────────────────────────────────────────── */
+.whatsapp-fab{
+  position:fixed;right:22px;bottom:22px;z-index:800;
+  background:#25D366;color:#fff;
+  padding:14px 22px;border-radius:50px;
+  text-decoration:none;font-weight:700;font-size:14.5px;
+  display:flex;align-items:center;gap:8px;
+  box-shadow:0 8px 30px rgba(37,211,102,.45);
+  transition:transform .2s,box-shadow .2s;
+}
+.whatsapp-fab:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(37,211,102,.55)}
+.fab-pulse{
+  position:absolute;inset:-4px;border-radius:50px;
+  background:#25D366;z-index:-1;
+  animation:pulse 2.5s ease-in-out infinite;
+}
+@keyframes pulse{0%,100%{opacity:.35;transform:scale(1)}50%{opacity:0;transform:scale(1.3)}}
+
+/* ── ANIMATIONS ────────────────────────────────────────────── */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+
+/* ── MOBILE ────────────────────────────────────────────────── */
+@media(max-width:900px){
+  .hero-content{grid-template-columns:1fr;gap:40px;padding:40px 0 60px}
+  .hero-right{height:360px;order:2}
+  .photo-main{width:200px;height:270px}
+  .photo-accent{width:160px;height:200px}
+  .services-grid,.process-steps,.why-grid,.about-grid,.contact-grid,.testi-grid{grid-template-columns:1fr}
+  .process-steps::before{display:none}
+  .hero-stats{gap:20px}
+  nav{display:none}
+  .nav-cta-mobile{display:flex!important}
+  .menu-btn{display:flex}
+  .about-quote{display:none}
+  .footer-inner{flex-direction:column;text-align:center}
+  .field-row{grid-template-columns:1fr}
+  .hero-ctas{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════ HEADER ═══════════ -->
+<header id="header">
+  <div class="wrap header-inner">
+    <a href="#" class="logo-wrap">
+      <img src="LOGO_DORADO.png" alt="HC Logo" class="logo-img">
+      <div class="logo-text">
+        <div class="logo-name">Héctor Chavarría</div>
+        <div class="logo-sub">Broker Hipotecario · AHMEX</div>
+      </div>
+    </a>
+    <nav>
+      <a href="#servicios">Servicios</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#contacto" class="nav-cta">Precalificar ahora</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ═══════════ HERO ═══════════ -->
+<section class="hero" id="inicio">
+  <div class="hero-bg"></div>
+  <div class="hero-grid-lines"></div>
+  <div class="wrap">
+    <div class="hero-content">
+      <div class="hero-left">
+        <div class="eyebrow">Juntos crecemos más&hellip;</div>
+        <h1>Encuentra el crédito hipotecario <em>ideal para ti</em></h1>
+        <p class="hero-sub">Compara múltiples opciones bancarias con un solo asesor certificado. Acompañamiento personal desde el primer contacto hasta la firma de escrituras.</p>
+        <div class="hero-ctas">
+          <a href="#contacto" class="btn-primary">
+            <span>🏠</span> Precalificar ahora
+          </a>
+          <a href="#servicios" class="btn-secondary">
+            Ver servicios
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-num">+15</div>
+            <div class="stat-label">Bancos comparados</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">100%</div>
+            <div class="stat-label">Sin costo inicial</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">AHMEX</div>
+            <div class="stat-label">Certificado</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="deco-ring"></div>
+        <div class="photo-accent">
+          <img src="FOTO_PROFESIONAL.png" alt="Héctor Chavarría, broker hipotecario certificado">
+        </div>
+        <div class="photo-main">
+          <img src="FOTO_PROFESIONAL_2.jpeg" alt="Héctor Chavarría, asesor hipotecario en Puebla">
+        </div>
+        <div class="badge-cert">
+          <strong>MB Concilium</strong>
+          <span>Respaldado &amp; certificado</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ TRUST BAR ═══════════ -->
+<div class="trust-bar">
+  <div class="wrap trust-inner">
+    <div class="trust-item"><span class="trust-icon">🏦</span><strong>+15 instituciones</strong>&nbsp;bancarias</div>
+    <div class="trust-item"><span class="trust-icon">✅</span>Certificado&nbsp;<strong>AHMEX</strong></div>
+    <div class="trust-item"><span class="trust-icon">🛡️</span>Respaldado por&nbsp;<strong>MB Concilium</strong></div>
+    <div class="trust-item"><span class="trust-icon">📍</span>Puebla · Cholula · Huejotzingo</div>
+  </div>
+</div>
+
+<!-- ═══════════ SERVICIOS ═══════════ -->
+<section class="services" id="servicios">
+  <div class="wrap">
+    <div class="section-label reveal">
+      <div class="tag">Lo que hago</div>
+      <h2>Soluciones hipotecarias <span class="gold">a tu medida</span></h2>
+      <p>Cada situación financiera es única. Encuentro la opción que se adapta a tu perfil y tus metas.</p>
+    </div>
+    <div class="services-grid">
+      <div class="srv-card reveal">
+        <div class="srv-num">01</div>
+        <span class="srv-icon">🏡</span>
+        <h3>Compra de vivienda</h3>
+        <p>Encuentra las mejores tasas del mercado para adquirir tu hogar nuevo o usado, con acompañamiento total.</p>
+      </div>
+      <div class="srv-card reveal">
+        <div class="srv-num">02</div>
+        <span class="srv-icon">🤝</span>
+        <h3>Cofinavit</h3>
+        <p>Combina tu crédito INFONAVIT con financiamiento bancario para maximizar tu poder adquisitivo.</p>
+      </div>
+      <div class="srv-card reveal">
+        <div class="srv-num">03</div>
+        <span class="srv-icon">🔄</span>
+        <h3>Cambio de hipoteca</h3>
+        <p>Mejora tu tasa actual. Analizo si un refinanciamiento te beneficia con proyecciones reales de ahorro.</p>
+      </div>
+      <div class="srv-card reveal">
+        <div class="srv-num">04</div>
+        <span class="srv-icon">💰</span>
+        <h3>Liquidez hipotecaria</h3>
+        <p>Utiliza la plusvalía de tu inmueble para obtener capital y concretar tus proyectos.</p>
+      </div>
+      <div class="srv-card reveal">
+        <div class="srv-num">05</div>
+        <span class="srv-icon">🏗️</span>
+        <h3>Construcción &amp; terreno</h3>
+        <p>Financiamiento especializado para construir desde cero o adquirir el terreno de tu elección.</p>
+      </div>
+      <div class="srv-card reveal">
+        <div class="srv-num">06</div>
+        <span class="srv-icon">🔨</span>
+        <h3>Remodelación</h3>
+        <p>Dale vida a tu hogar con financiamiento flexible y las mejores condiciones del mercado.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ WHY ═══════════ -->
+<section class="why" id="beneficios">
+  <div class="wrap">
+    <div class="why-grid">
+      <div class="why-left reveal">
+        <div class="tag">¿Por qué trabajar conmigo?</div>
+        <h2>Una asesoría diferente. <span style="color:var(--gold)">Resultados reales.</span></h2>
+        <p>No soy un vendedor de productos bancarios. Soy tu aliado estratégico para la decisión patrimonial más importante de tu vida.</p>
+        <a href="#contacto" class="btn-primary">Agendar diagnóstico gratuito</a>
+      </div>
+      <div class="why-list reveal">
+        <div class="why-item">
+          <div class="why-check">🎯</div>
+          <div class="why-item-text">
+            <h4>Comparación estratégica real</h4>
+            <p>Acceso a más de 15 bancos. Te presento opciones concretas, no promesas genéricas.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-check">👤</div>
+          <div class="why-item-text">
+            <h4>Atención 100% personalizada</h4>
+            <p>Trato directo conmigo en cada etapa. Sin asistentes, sin bots, sin rodeos.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-check">🗺️</div>
+          <div class="why-item-text">
+            <h4>Acompañamiento de inicio a firma</h4>
+            <p>Desde la precalificación hasta la firma de escrituras. Contigo en todo el camino.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-check">🏆</div>
+          <div class="why-item-text">
+            <h4>Certificación y respaldo institucional</h4>
+            <p>Certificado por AHMEX, operando bajo el respaldo de MB Concilium.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ PROCESO ═══════════ -->
+<section class="process" id="proceso">
+  <div class="wrap">
+    <div class="section-label reveal">
+      <div class="tag">Así trabajamos</div>
+      <h2>Tu crédito en <span class="gold">4 pasos claros</span></h2>
+      <p>Un proceso simple, transparente y sin sorpresas.</p>
+    </div>
+    <div class="process-steps">
+      <div class="step reveal">
+        <div class="step-num">1</div>
+        <h3>Diagnóstico inicial</h3>
+        <p>Analizamos tu perfil financiero sin compromiso y sin costo.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">2</div>
+        <h3>Comparativa bancaria</h3>
+        <p>Obtienes un análisis real de las mejores opciones disponibles para ti.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">3</div>
+        <h3>Trámite guiado</h3>
+        <p>Te acompaño con cada banco, documento y gestión que se necesite.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">4</div>
+        <h3>Firma de escrituras</h3>
+        <p>Estoy presente en el cierre para que todo fluya sin inconvenientes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SOBRE MÍ ═══════════ -->
+<section class="about" id="sobre-mi">
+  <div class="wrap about-grid">
+    <div class="about-photo reveal">
+      <div class="about-photo-frame">
+        <img src="FOTO_PROFESIONAL_2.jpeg" alt="Héctor Chavarría - Broker hipotecario certificado Puebla">
+      </div>
+      <div class="about-deco"></div>
+      <div class="about-quote">
+        <strong>Filosofía</strong>
+        "Una decisión hipotecaria bien tomada construye patrimonio para toda la familia."
+      </div>
+    </div>
+    <div class="about-text reveal">
+      <div class="tag">Quién soy</div>
+      <h2>Héctor Chavarría</h2>
+      <p>Soy broker hipotecario certificado por la Asociación Hipotecaria Mexicana (AHMEX), especializado en estructurar soluciones de crédito que se adaptan a la realidad de cada cliente.</p>
+      <p>Trabajo bajo el respaldo de MB Concilium y he acompañado a familias en Puebla, Cholula y Huejotzingo a concretar su patrimonio con confianza, claridad y estrategia.</p>
+      <p>Mi enfoque es simple: <strong>información real, opciones concretas y acompañamiento humano.</strong></p>
+      <div class="certs">
+        <div class="cert-badge"><span>🎓</span> AHMEX Certificado</div>
+        <div class="cert-badge"><span>🏛️</span> MB Concilium</div>
+        <div class="cert-badge"><span>📍</span> Puebla, México</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ TESTIMONIALES ═══════════ -->
+<section class="testi" id="testimonios">
+  <div class="wrap">
+    <div class="section-label reveal">
+      <div class="tag">Testimonios</div>
+      <h2>Lo que dicen quienes ya <span class="gold">confiaron en mí</span></h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Héctor nos explicó todo con claridad desde el primer día. Conseguimos una tasa mucho mejor que la que el banco nos ofrecía directamente."</p>
+        <div class="testi-author">Familia Martínez</div>
+        <div class="testi-loc">San Andrés Cholula</div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Yo no entendía nada de Cofinavit. Héctor me guió paso a paso y al final tuvimos las escrituras en menos tiempo del que esperaba."</p>
+        <div class="testi-author">Carlos R.</div>
+        <div class="testi-loc">Huejotzingo, Puebla</div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Cambié mi hipoteca y estoy ahorrando más de $3,000 mensuales. La asesoría fue completamente transparente y sin sorpresas."</p>
+        <div class="testi-author">Laura G.</div>
+        <div class="testi-loc">Puebla, Pue.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CONTACTO / FORMULARIO ═══════════ -->
+<section class="contact-section" id="contacto">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="contact-left reveal">
+        <div class="tag">Hablemos hoy</div>
+        <h2>El primer paso <span style="color:var(--gold)">no cuesta nada</span></h2>
+        <p>Completa el formulario y te contactaré por WhatsApp para revisar tus opciones reales. Sin compromisos, sin letras chicas.</p>
+        <div class="contact-info">
+          <div class="c-info-item">
+            <div class="c-icon">📱</div>
+            <a href="https://wa.me/522202741234">+52 220 274 1234</a>
+          </div>
+          <div class="c-info-item">
+            <div class="c-icon">✉️</div>
+            <a href="mailto:hectorchavarria.hipotecario@outlook.com">hectorchavarria.hipotecario@outlook.com</a>
+          </div>
+          <div class="c-info-item">
+            <div class="c-icon">📍</div>
+            <span>Puebla · Cholula · Huejotzingo</span>
+          </div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="form-card">
+          <h3>Solicita tu diagnóstico</h3>
+          <p class="form-sub">Gratuito · Sin compromiso · Respuesta en &lt;24 hrs</p>
+          <div class="field-row">
+            <div class="field">
+              <label>Nombre completo</label>
+              <input id="nombre" type="text" placeholder="Tu nombre">
+            </div>
+            <div class="field">
+              <label>Teléfono</label>
+              <input id="tel" type="tel" placeholder="10 dígitos">
+            </div>
+          </div>
+          <div class="field">
+            <label>Ingreso mensual aproximado</label>
+            <input id="ingreso" type="text" placeholder="Ej. $15,000">
+          </div>
+          <div class="field">
+            <label>¿Qué necesitas?</label>
+            <select id="tipo">
+              <option>Compra de vivienda</option>
+              <option>Cofinavit</option>
+              <option>Cambio de hipoteca</option>
+              <option>Liquidez hipotecaria</option>
+              <option>Construcción</option>
+              <option>Compra de terreno</option>
+              <option>Remodelación</option>
+            </select>
+          </div>
+          <button class="btn-form" onclick="sendWA()">
+            <span>💬</span> Enviar por WhatsApp
+          </button>
+          <p class="form-note">🔒 Tu información es confidencial y nunca será compartida.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CTA FINAL ═══════════ -->
+<section class="cta-final">
+  <div class="wrap">
+    <div class="reveal">
+      <h2>¿Listo para hacer crecer tu patrimonio?</h2>
+      <p>Una conversación de 15 minutos puede definir la mejor decisión financiera de tu vida.</p>
+      <a href="https://wa.me/522202741234" target="_blank" rel="noopener" class="btn-dark">
+        <span>💬</span> Hablar ahora por WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="LOGO_DORADO.png" alt="HC" class="footer-logo">
+        <span class="footer-name">Héctor Chavarría</span>
+      </div>
+      <div class="footer-links">
+        <a href="#servicios">Servicios</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#contacto">Contacto</a>
+        <a href="https://wa.me/522202741234" target="_blank">WhatsApp</a>
+      </div>
+    </div>
+    <p class="footer-copy">© 2025 Héctor Chavarría · Broker Hipotecario Certificado AHMEX · MB Concilium · 2202741234 · hectorchavarria.hipotecario@outlook.com</p>
+  </div>
+</footer>
+
+<!-- ═══════════ FAB WHATSAPP ═══════════ -->
+<a class="whatsapp-fab" href="https://wa.me/522202741234" target="_blank" rel="noopener">
+  <div class="fab-pulse"></div>
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  WhatsApp
+</a>
+
+<script>
+/* ── WhatsApp form ── */
+function sendWA(){
+  const n=document.getElementById('nombre').value.trim();
+  const t=document.getElementById('tel').value.trim();
+  const i=document.getElementById('ingreso').value.trim();
+  const tp=document.getElementById('tipo').value;
+  if(!n||!t){alert('Por favor ingresa tu nombre y teléfono.');return;}
+  const msg=encodeURIComponent('Hola Héctor 👋, soy '+n+'.\nTeléfono: '+t+'\nIngreso mensual: '+i+'\nNecesito: '+tp+'\n\nMe gustaría recibir mi diagnóstico hipotecario gratuito.');
+  window.open('https://wa.me/522202741234?text='+msg,'_blank');
+}
+
+/* ── Sticky header ── */
+window.addEventListener('scroll',()=>{
+  document.getElementById('header').classList.toggle('scrolled',window.scrollY>60);
+});
+
+/* ── Scroll reveal ── */
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible')}});
+},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+/* ── Stagger children ── */
+document.querySelectorAll('.services-grid,.testi-grid,.why-list,.process-steps').forEach(grid=>{
+  [...grid.children].forEach((child,i)=>{
+    child.style.transitionDelay=(i*0.1)+'s';
+  });
+});
+</script>
+</body>
+</html>
